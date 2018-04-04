@@ -3,29 +3,29 @@ Apax Weather was done by me as a coding challenge for Apax Software. The site al
 
 # Technologies
 ## PHP 7.2 / Laravel 5.5
-I selected PHP and Laravel for a few reasons.
+I selected [PHP](http://www.php.net/) and [Laravel](https://laravel.com/docs/5.5) for a few reasons.
 * It was my most recent technologoes used for a full-stack web application.
 * It is one of four technologies specifically listed as used by APAX Software's.
 * It was taught by (at least) the last two Bootcamps done by Awesome Inc U.
 
 ## Bootstrap 4
-I selected Bootstrap 4 for three reasons.
+I selected [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for three reasons.
 * I like the way it handles layouts.
 * It is well documented.
 * It has a solution for most everything I need to do.
 
 ## PostgreSQL
-I selected PostgreSQL for three reasons.
+I selected [PostgreSQL](https://www.postgresql.org/) for three reasons.
 * I have experience in it.
 * It works well with my other technologies.
 * It is supported and free on Heroku.
 
 # APIs
 ## Google Maps Geocoding API
-I selected Google Maps Geocoding API because I wanted a robust way for people to input their location into the application. The API provided a very easy way to get a standard location from almost anything that a person could type in and covering most of the world. This API also has a high usage limit on their API requests.
+I selected [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/intro) because I wanted a robust way for people to input their location into the application. The API provided a very easy way to get a standard location from almost anything that a person could type in and covering most of the world. This API also has a high usage limit on their API requests.
 
 ## Yahoo Weather API
-I selected Yahoo because it has a really interesting query language associated with it (YQL) and has a high usage limit on their API requests.
+I selected the [Yahoo Weather API](https://developer.yahoo.com/weather/) because it has a really interesting query language associated with it (YQL) and has a high usage limit on their API requests.
 
 # Hosting/Remo
 The code is stored on GitHub [GitHub](https://github.com/heath-w/apax_weather) and hosted on [Heroku](https://apax-weather.heroku.com/).
