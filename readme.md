@@ -28,8 +28,7 @@ I selected Google Maps Geocoding API because I wanted a robust way for people to
 I selected Yahoo because it has a really interesting query language associated with it (YQL) and has a high usage limit on their API requests.
 
 # Hosting/Remo
-The code is stored on GitHub [GitHub](https://www.github.com) and hosted on [Heroku](https://apax-weather.heroku.com/).
-A Gist is provided [here](https://www.github.com).
+The code is stored on GitHub [GitHub](https://github.com/heath-w/apax_weather) and hosted on [Heroku](https://apax-weather.heroku.com/).
 
 # Closing
 This was a fun project. I started this on 03/31/2018 and finished on 04/04/2018. I worked on it a couple of hours a night almost every night. If I had more time I would do a few more things to it like better error-handling, moving the weather cards and some of their functionality to a JS framework (maybe Vue), try to optomize the number of API calls made, add a "settings" screen that allowed for mass removal of locations, and do a better job of customizing the responsiveness of the layout.
