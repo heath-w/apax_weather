@@ -1,79 +1,41 @@
+# Apax Weather
+Apax Weather was done by me as a coding challenge for Apax Software. The site allows a user to register and login accounts. They can search for locations using a wide range of inputs and covering most of the Earth. The user may save a location to always be viewed when navigating to the front page and they can delete saved locations they no longer wish to see.
 
-# Bootstrap 4
-composer require laravelnews/laravel-twbs4
-php artisan preset bootstrap4-auth
-npm install
-npm run dev
+# Technologies
+## PHP 7.2 / Laravel 5.5
+I selected PHP and Laravel for a few reasons.
+⋅⋅* It was my most recent technologoes used for a full-stack web application.
+⋅⋅* It is one of four technologies specifically listed as used by APAX Software's.
+..* It was taught by (at least) the last two Bootcamps done by Awesome Inc U.
 
-# Database (PostgreSQL)
-CREATE USER apaxweatheruser WITH PASSWORD 'AwWASD1978antfirestar';
-CREATE DATABASE apaxweather OWNER apaxweatheruser;
+## Bootstrap 4
+I selected Bootstrap 4 for three reasons.
+..* I like the way it handles layouts.
+..* It is well documented.
+..* It has a solution for most everything I need to do.
 
-postgres://apaxweatheruser:AwWASD1978antfirestar@127.0.0.1:5432/apaxweather
+## PostgreSQL
+I selected PostgreSQL for three reasons.
+..* I have experience in it.
+..* It works well with my other technologies.
+..* It is supported and free on Heroku.
 
-# Authentication
-php artisan make:auth
-php artisan migrate
+# APIs
+## Google Maps Geocoding API
+I selected Google Maps Geocoding API because I wanted a robust way for people to input their location into the application. The API provided a very easy way to get a standard location from almost anything that a person could type in and covering most of the world. This API also has a high usage limit on their API requests.
 
-# Run server
-php artisan serve
+## Yahoo Weather API
+I selected Yahoo because it has a really interesting query language associated with it (YQL) and has a high usage limit on their API requests.
 
+# Hosting/Remo
+The code is stored on GitHub [GitHub](https://www.github.com) and hosted on [Heroku](https://apax-weather.heroku.com/).
+A Gist is provided [here](https://www.github.com).
 
-
-
-
-php artisan migrate
-
-
-# OpenWeatherMap API example
-http://api.openweathermap.org/data/2.5/weather?APPID=95fcd1f957be83fbd4972e941c94f9c9&zip=<zipcode_value>
-
-Dev API Key a7e7ed57db1c910144ee9a32a5fd4221
-http://api.openweathermap.org/data/2.5/weather?APPID=a7e7ed57db1c910144ee9a32a5fd4221&zip=40502
-http://api.openweathermap.org/data/2.5/weather?APPID=a7e7ed57db1c910144ee9a32a5fd4221&zip=E1
+# Closing
+This was a fun project. If I had more time I would do a few more things to it like better error-handling, moving the weather cards and some of their functionality to a JS framework (maybe Vue), try to optomize the number of API calls made, and do a better job of customizing the responsiveness of the layout.
 
 
-{
-  "coord": {
-    "lon": -84.49,
-    "lat": 38.02
-  },
-  "weather": [
-    {
-      "id": 800,
-      "main": "Clear",
-      "description": "clear sky",
-      "icon": "01d"
-    }
-  ],
-  "base": "stations",
-  "main": {
-    "temp": 289.2,
-    "pressure": 1019,
-    "humidity": 38,
-    "temp_min": 288.15,
-    "temp_max": 290.15
-  },
-  "visibility": 16093,
-  "wind": {
-    "speed": 4.6,
-    "deg": 230
-  },
-  "clouds": {
-    "all": 1
-  },
-  "dt": 1522539300,
-  "sys": {
-    "type": 1,
-    "id": 1129,
-    "message": 0.0043,
-    "country": "US",
-    "sunrise": 1522495385,
-    "sunset": 1522540862
-  },
-  "id": 420013316,
-  "name": "Lexington",
-  "cod": 200
-}
+
+
 
 
