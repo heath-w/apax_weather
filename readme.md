@@ -4,21 +4,21 @@ Apax Weather was done by me as a coding challenge for Apax Software. The site al
 # Technologies
 ## PHP 7.2 / Laravel 5.5
 I selected PHP and Laravel for a few reasons.
-⋅⋅* It was my most recent technologoes used for a full-stack web application.
-⋅⋅* It is one of four technologies specifically listed as used by APAX Software's.
-..* It was taught by (at least) the last two Bootcamps done by Awesome Inc U.
+* It was my most recent technologoes used for a full-stack web application.
+* It is one of four technologies specifically listed as used by APAX Software's.
+* It was taught by (at least) the last two Bootcamps done by Awesome Inc U.
 
 ## Bootstrap 4
 I selected Bootstrap 4 for three reasons.
-..* I like the way it handles layouts.
-..* It is well documented.
-..* It has a solution for most everything I need to do.
+* I like the way it handles layouts.
+* It is well documented.
+* It has a solution for most everything I need to do.
 
 ## PostgreSQL
 I selected PostgreSQL for three reasons.
-..* I have experience in it.
-..* It works well with my other technologies.
-..* It is supported and free on Heroku.
+* I have experience in it.
+* It works well with my other technologies.
+* It is supported and free on Heroku.
 
 # APIs
 ## Google Maps Geocoding API
