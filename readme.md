@@ -32,7 +32,7 @@ The code is stored on GitHub [GitHub](https://www.github.com) and hosted on [Her
 A Gist is provided [here](https://www.github.com).
 
 # Closing
-This was a fun project. If I had more time I would do a few more things to it like better error-handling, moving the weather cards and some of their functionality to a JS framework (maybe Vue), try to optomize the number of API calls made, and do a better job of customizing the responsiveness of the layout.
+This was a fun project. I started this on 03/31/2018 and finished on 04/04/2018. I worked on it a couple of hours a night almost every night. If I had more time I would do a few more things to it like better error-handling, moving the weather cards and some of their functionality to a JS framework (maybe Vue), try to optomize the number of API calls made, and do a better job of customizing the responsiveness of the layout.
 
 
 
