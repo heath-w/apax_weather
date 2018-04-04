@@ -16,7 +16,7 @@ class SearchController extends Controller
     
   		if (isset($request) === true) {
 	  		$locationSearch = $request->input('searchLocationInput');
-		  	error_log('SearchController.search - locationSearch: ' . print_r($locationSearch, true));
+		  	// error_log('SearchController.search - locationSearch: ' . $locationSearch);
 
 		  	if (isset($locationSearch) === true) {
 		  		$location = $this->locationSearch($locationSearch);
@@ -63,35 +63,35 @@ class SearchController extends Controller
 
   public function locationSearch($address) {
   	error_log('SearchController.locationSearch');
-  	error_log('SearchController.locationSearch - address: ' . $address);
+  	// error_log('SearchController.locationSearch - address: ' . $address);
 
   	try {
 
   		$baseGoogleURL = env('API_GOOGLE_BASE_URL', 'https://maps.googleapis.com/maps/api/geocode/json?key=%API%&address=%ADDRESS%');
-			error_log('SearchController.locationSearch - baseGoogleURL: ' . $baseGoogleURL);
+			// error_log('SearchController.locationSearch - baseGoogleURL: ' . $baseGoogleURL);
 
 			$baseGoogleAPI = env('API_GOOGLE_API_KEY', '12345');
-			error_log('SearchController.locationSearch - baseGoogleAPI: ' . $baseGoogleAPI);
+			// error_log('SearchController.locationSearch - baseGoogleAPI: ' . $baseGoogleAPI);
 
 			$encodedLocation = urlencode($address);
 
 			$origPhrases = array('%API%', '%ADDRESS%');
 			$newPhrases = array($baseGoogleAPI, $encodedLocation);
 			$googleLocationURL = str_replace($origPhrases, $newPhrases, $baseGoogleURL);
-			error_log('SearchController.locationSearch - googleLocationURL: ' . $googleLocationURL);
+			// error_log('SearchController.locationSearch - googleLocationURL: ' . $googleLocationURL);
 
 			$json = $this->httpRequestGet($googleLocationURL);
-		  error_log('SearchController.locationSearch - GoogleURL Response JSON: ' . $json);
+		  // error_log('SearchController.locationSearch - GoogleURL Response JSON: ' . $json);
 
 		  if (isset($json) === true) {
 		  	$locationData = json_decode($json);
-			  error_log('SearchController.locationSearch - GoogleURL Response Object: ' . print_r($locationData, true));
+			  // error_log('SearchController.locationSearch - GoogleURL Response Object: ' . print_r($locationData, true));
 
 			  if (isset($locationData->error_message) === false && isset($locationData->results) === true) {
-			  	error_log('SearchController.locationSearch - GoogleURL Response Object, results: ' . print_r($locationData->results, true));
+			  	// error_log('SearchController.locationSearch - GoogleURL Response Object, results: ' . print_r($locationData->results, true));
 
 			  	$location = $locationData->results[ 0 ]->formatted_address;
-			  	error_log('SearchController.locationSearch - GoogleURL Response Object, formatted address: ' . $location);
+			  	// error_log('SearchController.locationSearch - GoogleURL Response Object, formatted address: ' . $location);
 
 			  	return $location;
 			  }
@@ -112,24 +112,24 @@ class SearchController extends Controller
 
   public function weatherSearch($location) {
 		error_log('SearchController.weatherSearch');  	
-		error_log('SearchController.weatherSearch - location: ' . $location);
+		// error_log('SearchController.weatherSearch - location: ' . $location);
 
 		try {
 
 			$baseYahooYQLQuery = env('API_YAHOO_BASE_GEOPLACES_YQL', 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="%ADDRESS%")');
-			error_log('SearchController.weatherSearch - baseYahooYQLQuery: ' . $baseYahooYQLQuery);
+			// error_log('SearchController.weatherSearch - baseYahooYQLQuery: ' . $baseYahooYQLQuery);
 
 			$yahooYQLQuery = str_replace('%ADDRESS%', $location, $baseYahooYQLQuery);
-			error_log('SearchController.weatherSearch - yahooYQLQuery: ' . $yahooYQLQuery);
+			// error_log('SearchController.weatherSearch - yahooYQLQuery: ' . $yahooYQLQuery);
 
 			$encodedYahooYQLQuery = urlencode($yahooYQLQuery);
-			error_log('SearchController.weatherSearch - encodedYahooYQLQuery: ' . $encodedYahooYQLQuery);
+			// error_log('SearchController.weatherSearch - encodedYahooYQLQuery: ' . $encodedYahooYQLQuery);
 
 			$baseYahooYQLURL = env('API_YAHOO_BASE_URL', 'http://query.yahooapis.com/v1/public/yql?format=json&q=%QUERY%');
-			error_log('SearchController.weatherSearch - baseYahooYQLURL: ' . $baseYahooYQLURL);
+			// error_log('SearchController.weatherSearch - baseYahooYQLURL: ' . $baseYahooYQLURL);
 
 			$yahooYQLURL = str_replace('%QUERY%', $encodedYahooYQLQuery, $baseYahooYQLURL);
-			error_log('SearchController.weatherSearch - yahooYQLQuery: ' . $yahooYQLURL);
+			// error_log('SearchController.weatherSearch - yahooYQLQuery: ' . $yahooYQLURL);
 
 			return $this->runYQL($yahooYQLURL);
 
@@ -144,19 +144,19 @@ class SearchController extends Controller
 		error_log('SearchController.weatherGet - woeid: ' . $woeid);
 
 		$baseYahooYQLQuery = env('API_YAHOO_BASE_WEATHERFORECAST_YQL', 'select * from weather.forecast where woeid=%WOEID%');
-		error_log('SearchController.weatherGet - baseYahooYQLQuery: ' . $baseYahooYQLQuery);
+		// error_log('SearchController.weatherGet - baseYahooYQLQuery: ' . $baseYahooYQLQuery);
 
 		$yahooYQLQuery = str_replace('%WOEID%', $woeid, $baseYahooYQLQuery);
-		error_log('SearchController.weatherGet - yahooYQLQuery: ' . $yahooYQLQuery);
+		// error_log('SearchController.weatherGet - yahooYQLQuery: ' . $yahooYQLQuery);
 
 		$encodedYahooYQLQuery = urlencode($yahooYQLQuery);
-		error_log('SearchController.weatherGet - encodedYahooYQLQuery: ' . $encodedYahooYQLQuery);
+		// error_log('SearchController.weatherGet - encodedYahooYQLQuery: ' . $encodedYahooYQLQuery);
 
 		$baseYahooYQLURL = env('API_YAHOO_BASE_URL', 'http://query.yahooapis.com/v1/public/yql?format=json&q=%QUERY%');
-		error_log('SearchController.weatherGet - baseYahooYQLURL: ' . $baseYahooYQLURL);
+		// error_log('SearchController.weatherGet - baseYahooYQLURL: ' . $baseYahooYQLURL);
 
 		$yahooYQLURL = str_replace('%QUERY%', $encodedYahooYQLQuery, $baseYahooYQLURL);
-		error_log('SearchController.weatherGet - yahooYQLQuery: ' . $yahooYQLURL);
+		// error_log('SearchController.weatherGet - yahooYQLQuery: ' . $yahooYQLURL);
 
 		return $this->runYQL($yahooYQLURL);
   }
@@ -166,11 +166,11 @@ class SearchController extends Controller
   	error_log('SearchController.runYQL - yahooYQLURL: ' . $yahooYQLURL);
 
   	$json = $this->httpRequestGet($yahooYQLURL);
-		error_log('SearchController.weatherGet - json: ' . $json);
+		// error_log('SearchController.weatherGet - json: ' . $json);
 
 		if (isset($json) === true) {
 			$weatherData = json_decode($json);
-			error_log('SearchController.weatherGet - weatherData: ' . print_r($weatherData, true));
+			// error_log('SearchController.weatherGet - weatherData: ' . print_r($weatherData, true));
 
 			if (isset($weatherData) === true) {
 				$directionCompass = $this->getDirectionCompass( $weatherData->query->results->channel->wind->direction );
@@ -210,7 +210,7 @@ class SearchController extends Controller
   	$session = curl_init($url);
 	  curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
 	  $json = curl_exec($session);
-	  error_log('SearchController.httpRequestGet - URL Response JSON: ' . print_r($json, true));
+	  // error_log('SearchController.httpRequestGet - URL Response JSON: ' . print_r($json, true));
 
 	  return $json;
   }
