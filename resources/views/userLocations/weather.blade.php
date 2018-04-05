@@ -1,14 +1,15 @@
 <div class="card normal-text">
   <div class="card-header card-title lead">
   	
+  	<span class="weather-card-location mb-1"><strong>{{ $location }}</strong></span>
+
   	@if ($toSave === true)
 
   		<form id="saveLocationForm" class="form-inline" action="/userLocations" method="post">
-	  		<span class="weather-card-location mb-1"><strong>{{ $location }}</strong></span>
 				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 				<input type="hidden" name="location" value="{{ $location }}" />	      			
 			  <div class="input-group-prepend">
-			  	<input type="submit" id="saveLocationFormSubmit" class="btn btn-secondary" value="Save Location" />
+			  	<input type="submit" id="saveLocationFormSubmit" class="btn btn-sm btn-secondary" value="Save Location" />
 			  </div>
 			  <div class="collapse-button">
 			  	<button class="btn btn-sm btn-secondary ml-1 weather-collapse-button" type="button" data-toggle="collapse" data-target="#{{ $id }}" aria-expanded="true" aria-controls="{{ $id }}">
@@ -20,11 +21,10 @@
   	@elseif ($toDelete === true)
 
   		<form id="deleteLocationForm" class="form-inline" action="/userLocations/{{ $id }}" method="post">
-	  		<span  class="weather-card-location mb-1"><strong>{{ $location }}</strong></span>
-				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
+	  		<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 				<input type="hidden" name="_method" value="delete" />
 			  <div class="input-group-prepend">
-			  	<input type="submit" id="deleteLocationFormSubmit" class="btn btn-secondary" value="Delete Location" />
+			  	<input type="submit" id="deleteLocationFormSubmit" class="btn btn-sm btn-secondary" value="Delete Location" />
 			  </div>
 			  <div class="collapse-button">
 			  	<button class="btn btn-sm btn-secondary ml-1 weather-collapse-button" type="button" data-toggle="collapse" data-target="#{{ $id }}" aria-expanded="true" aria-controls="{{ $id }}">
@@ -34,8 +34,6 @@
 			</form>
 
   	@else
-
-	  	<span class="weather-card-location mb-1"><strong>{{ $location }}</strong></span>
 
 	  	<div class="collapse-button">
 		  	<button class="btn btn-sm btn-secondary ml-1 weather-collapse-button" type="button" data-toggle="collapse" data-target="#{{ $id }}" aria-expanded="true" aria-controls="{{ $id }}">

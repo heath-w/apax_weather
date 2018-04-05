@@ -68,7 +68,8 @@ a.reverse:active { /* clicked */
 }
 
 .normal-text {
-	color: #a2a2a5;
+	/*color: #a2a2a5;*/
+	color: #656580;
 }
 
 .field {
@@ -83,13 +84,23 @@ a.reverse:active { /* clicked */
 	border-width: thick !important;
 }
 
+.card-body {
+	background-color: white;
+}
+
+.weather-card-location {
+	/*color: black;*/		
+	/*color: #0000b7;*/
+	color: #003a96;
+}
+
 .weather-collapse-button {
 	display: none;
-	height: 36px;
+	height: 28px;
 }
 
 .weather-collapse-image {
-	height: 25px;
+	height: 17px;
 }
 
 .full-height {
@@ -204,9 +215,16 @@ a.reverse:active { /* clicked */
 	}
 
 	.weather-card-location {
-		margin-right: 20px !important;
-		font-size: 20px;
-		color: black;		
+		font-size: 14px;
+	}
+
+	.weather-collapse-button {
+		display: initial;
+		height: 28px;
+	}
+
+	.weather-collapse-image {
+		height: 17px;
 	}
 
 	.weather-date-display {
@@ -282,9 +300,16 @@ a.reverse:active { /* clicked */
   }
 
 	.weather-card-location {
-		margin-right: 50px !important;
-		font-size: 20px;
-		color: black;
+		font-size: 24px;
+	}
+
+	.weather-collapse-button {
+		display: initial;
+		height: 28px;
+	}
+
+	.weather-collapse-image {
+		height: 17px;
 	}
 
 	.weather-date-display {
@@ -331,7 +356,15 @@ a.reverse:active { /* clicked */
   .weather-card-location {
 		margin-right: 80px !important;
 		font-size: 24px;
-		color: black;		
+	}
+
+	.weather-collapse-button {
+		display: initial;
+		height: 28px;
+	}
+
+	.weather-collapse-image {
+		height: 17px;
 	}
 
 	.weather-date-display {
@@ -404,7 +437,15 @@ a.reverse:active { /* clicked */
 	.weather-card-location {
 		margin-right: 0px !important;
 		font-size: 24px;
-		color: black;		
+	}
+
+	.weather-collapse-button {
+		display: initial;
+		height: 28px;
+	}
+
+	.weather-collapse-image {
+		height: 17px;
 	}
 
 	.weather-date-display {
@@ -447,7 +488,15 @@ a.reverse:active { /* clicked */
 	.weather-card-location {
 		margin-right: 125px !important;
 		font-size: 30px;
-		color: black;		
+	}
+
+	.weather-collapse-button {
+		display: initial;
+		height: 28px;
+	}
+
+	.weather-collapse-image {
+		height: 17px;
 	}
 
 	.weather-date-display {
