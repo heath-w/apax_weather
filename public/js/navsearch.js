@@ -57,6 +57,13 @@ function clearValidateLocationInput() {
 window.onload = function() { 
 	console.log('window.onload');
 
-	document.getElementById('searchLocationInput').onkeydown = clearValidateLocationInput;
-	document.getElementById('searchLocationSubmit').onclick = validateLocationInput;
+	var searchLocationInput = document.getElementById('searchLocationInput');
+	var searchLocationSubmit = document.getElementById('searchLocationSubmit');
+	
+	if ( searchLocationInput !== null ) {
+		searchLocationInput.onkeydown = clearValidateLocationInput;
+	}
+	if ( searchLocationSubmit !== null ) {
+		searchLocationSubmit.onclick = validateLocationInput;
+	}
 };

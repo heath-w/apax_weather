@@ -30,7 +30,7 @@ class User extends Authenticatable
   public function userLocations() {
   	error_log('User.userLocations');
 
-  	$userLocations = $this->hasMany('\App\UserLocation')->orderBy('location', 'desc')->get();
+  	$userLocations = $this->hasMany('\App\UserLocation')->orderBy('location')->get();
     return $userLocations;
   }  
 }

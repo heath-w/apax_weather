@@ -22,7 +22,7 @@
 		  		[
 		  			'toSave' => true,
 		  			'toDelete' => false,
-		  			'id' => null,
+		  			'id' => 1,
 		  			'location' => $location,
 		  			'conditions' => $conditions,
 		  			'forecast' => $forecast,

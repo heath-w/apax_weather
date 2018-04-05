@@ -21,14 +21,14 @@
 <body>
 	<div id="app">		
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-		  <div class="container">
+		  <div class="container nav-container d-flex justify-content-start">
 
 		  	@if (Auth::guest() !== true)
-		      <a class="navbar-brand" href="{{ url('/home') }}">
+		      <a class="navbar-brand mr-1" href="{{ url('/home') }}">
 		      	{{ config('app.name', 'Weather') }}
 		      </a>
 	      @else
-	      	<a class="navbar-brand" href="{{ url('/') }}">
+	      	<a class="navbar-brand mr-1" href="{{ url('/') }}">
 		      	{{ config('app.name', 'Weather') }}
 		      </a>
 	      @endif
@@ -60,7 +60,7 @@
 	      	<span class="navbar-toggler-icon"></span>
 	      </button>
 
-	      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+	      <div class="collapse navbar-collapse justify-content-end ml-auto" id="navbarSupportedContent">
 	        <ul class="navbar-nav">
 	          @if (Auth::guest())
 	            <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
@@ -98,26 +98,29 @@
 	  @yield('content')
 	</div>
 
-	<nav class="navbar fixed-bottom navbar-dark bg-dark">
-		<div class="container">
-			<span class="navbar-text">
-				Created by Heath Williams using PHP, Laravel, Bootstrap, and PostgreSQL.
+	<nav id="navFooter"class="navbar fixed-bottom navbar-dark bg-dark justify-content-between">
+		<div class="container footer-container">
+			<span class="navbar-text d-flex align-items-center align-middle footer-navbar-text">
+				<span>Created by Heath Williams using PHP, Laravel, Bootstrap, and PostgreSQL.</span>
+				
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="img-fluid" src="{{ asset('images/powered_by_google_on_non_white.png') }}">
-				&nbsp;&nbsp;
-				<a href="https://www.yahoo.com/?ilc=401" target="_blank">
-					<img class="img-fluid" src="https://poweredby.yahoo.com/white.png" width="134" height="29"/>
-				</a>
-			</span>
-			<a class="navbar-brand justify-content-end" href="#">
-				Top
-			</a>
+				
+				<img class="navbar-brand img-fluid google-img" src="{{ asset('images/powered_by_google_on_non_white.png') }}">
+				
+				<a class="navbar-brand" href="https://www.yahoo.com/?ilc=401" target="_blank">
+					<img class="img-fluid yahoo-img" src="https://poweredby.yahoo.com/white.png"/>
+				</a>		
+			</span>		
+			<span  class="navbar-text d-flex align-items-center align-middle footer-navbar-text">
+				<a id="top" class="navbar-brand align-middle" href="#"><span class="align-middle">Top</span></a>		
+			</span>	
 		</div>		
 	</nav>
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/navsearch.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('js/weather.js') }}"></script>
 	
 </body>
 
