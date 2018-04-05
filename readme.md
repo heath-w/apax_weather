@@ -5,8 +5,8 @@ Apax Weather was done by me as a coding challenge for Apax Software. The site al
 ## PHP 7.2 / Laravel 5.5
 I selected [PHP](http://www.php.net/) and [Laravel](https://laravel.com/docs/5.5) for a few reasons.
 * It was my most recent technologoes used for a full-stack web application.
-* It is one of four technologies specifically listed as used by APAX Software's.
-* It was taught by (at least) the last two Bootcamps done by Awesome Inc U.
+* It is one of four technologies specifically listed as used by APAX Software.
+* It was taught in the Web Developer Bootcamps done by Awesome Inc U.
 
 ## Bootstrap 4
 I selected [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for three reasons.
