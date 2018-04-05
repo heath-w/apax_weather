@@ -19,6 +19,10 @@ body {
 	margin-right: 0px;
 }
 
+.navbar .navbar-brand {
+	font-size: 12px;
+}
+
 .yahoo-img {
 	height: 29;
 	width: 134px;
@@ -89,7 +93,7 @@ a.reverse:active { /* clicked */
 	min-width: 100px;
 	max-width: 140px;
 }
-  
+
 .card-body {
 	background-color: white;
 }
@@ -334,6 +338,10 @@ a.reverse:active { /* clicked */
 		/*background-color: purple;*/
   }
 
+  .navbar .navbar-brand {
+  	font-size: 18px;
+  }
+
   #searchLocationInputForm {
   	margin-left: 1em !important;
   }
@@ -470,6 +478,10 @@ a.reverse:active { /* clicked */
 		/*background-color: white;*/
   }
 
+  .navbar .navbar-brand {
+  	font-size: 18px;
+  }
+  
   #welcomeArea {
 		margin-top: 100px;
 	}
