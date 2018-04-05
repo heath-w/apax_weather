@@ -84,6 +84,12 @@ a.reverse:active { /* clicked */
 	border-width: thick !important;
 }
 
+#searchLocationInput {
+	width: 120px;
+	min-width: 100px;
+	max-width: 140px;
+}
+  
 .card-body {
 	background-color: white;
 }
