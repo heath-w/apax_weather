@@ -27,7 +27,7 @@ I selected [Google Maps Geocoding API](https://developers.google.com/maps/docume
 ## Yahoo Weather API
 I selected the [Yahoo Weather API](https://developer.yahoo.com/weather/) because it has a really interesting query language associated with it (YQL) and has a high usage limit on their API requests.
 
-# Hosting/Remo
+# Hosting/Repo
 The code is stored on GitHub [GitHub](https://github.com/heath-w/apax_weather) and hosted on [Heroku](https://apax-weather.herokuapp.com/).
 
 # Closing
